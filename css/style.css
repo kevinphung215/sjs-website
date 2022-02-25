@@ -1,0 +1,296 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--linkColor: rgb(221, 71, 71);
+	--background: #fff;
+	--color1: #00b4d8;
+	--color2: #90e0ef;
+	--color3: #caf0f8;
+}
+
+body {
+	background-color: var(--color3);
+	font-family: "Poppins", sans-serif;
+	font-family: "Space Mono", monospace;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+li,
+a,
+button {
+	text-decoration: none;
+}
+
+p {
+	margin: 20px 10%;
+}
+
+img {
+	width: 100%;
+}
+
+.title {
+	padding: 20px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5%;
+	background-color: var(--background);
+}
+
+.logo {
+	min-width: 100px;
+	width: 10%;
+	cursor: pointer;
+}
+
+.navLinks {
+	font-weight: 600;
+}
+
+.navLinks li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.navLinks li a {
+	transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+	color: var(--linkColor);
+	font-weight: 600;
+}
+
+button {
+	padding: 9px;
+	background-color: rgba(0, 136, 169, 0.5);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: rgba(0, 136, 169, 1);
+}
+
+.mainContainer {
+	align-items: center;
+}
+
+/* ### slider ### */
+.slider {
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider img {
+	width: 100%;
+	height: 100vh;
+}
+
+/* ### video surveillance ### */
+.video {
+	background-color: var(--color1);
+	text-align: center;
+	color: white;
+}
+
+.videoText {
+	display: flex;
+	color: rgb(0, 0, 0);
+	background: url("../img/surveillanceBanner.jpg");
+	min-height: 100%;
+	height: 50vh;
+	position: relative;
+	opacity: 0.7;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* this is for parallax effect
+    fixed = parallax 
+    scroll = normal */
+	background-attachment: fixed;
+	justify-content: space-evenly;
+}
+
+.videoImg {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: white;
+}
+
+.videoImg img {
+	width: 200px;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+/* ### access control ### */
+.access {
+	background-color: var(--color1);
+	text-align: center;
+	color: white;
+}
+
+.accessText {
+	display: flex;
+	color: rgb(255, 255, 255);
+	background: url("../img/accessBanner2.jpg");
+	min-height: 100%;
+	height: 50vh;
+	position: relative;
+	opacity: 0.7;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* this is for parallax effect
+    fixed = parallax 
+    scroll = normal */
+	background-attachment: fixed;
+	padding: 20px 30px;
+	align-items: center;
+	justify-content: space-evenly;
+	text-transform: capitalize;
+	line-height: 4rem;
+	font-size: 2rem;
+}
+
+/* ### network cabling ### */
+.network {
+	background-color: var(--color1);
+	text-align: center;
+	color: white;
+}
+
+.networkText {
+	width: 100%;
+	padding: 70px 0;
+	background: #efefef;
+}
+
+.serviceBox {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.box {
+	flex-basis: 48%;
+	text-align: center;
+	border-radius: 7px;
+	margin-bottom: 20px;
+	color: #fff;
+	position: relative;
+}
+
+.box img {
+	width: 100%;
+	height: 100%;
+	border-radius: 7px;
+}
+
+/* text on top of pictures */
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	border-radius: 7px;
+	cursor: pointer;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), #90e0ef);
+	opacity: 0;
+	transition: 1s;
+}
+
+.box:hover .overlay {
+	opacity: 1;
+}
+
+.boxText {
+	width: 80%;
+	position: absolute;
+	bottom: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: 1s;
+}
+
+hr {
+	background: #fff;
+	height: 2px;
+	border: 0;
+}
+
+.boxText p {
+	font-size: 14px;
+}
+
+.box:hover .boxText {
+	bottom: 40%;
+	opacity: 1;
+}
+
+/* ### home automation ### */
+.homeAuto {
+	background-color: var(--color1);
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-weight: 600;
+	background: url("../img/home.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    opacity: 0.7;
+}
+
+footer {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+    padding: 20px 5% 20px;
+}
+
+.footerContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer img {
+	width: 100px;
+}
+
+.companylogo {
+	display: flex;
+    justify-content: space-around;
+}
+
+.otherlogo {
+    filter: grayscale(100%);
+}
+
+.otherlogo:hover {
+    filter: grayscale(0%);
+}
